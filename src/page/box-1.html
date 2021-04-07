@@ -59,13 +59,9 @@
         document.body.appendChild(renderer.domElement); //body元素中插入canvas对象
 
         //执行渲染操作 指定场景、相机作为参数
-        function render() {
+        function animate() {
             mesh.rotateY(0.01);
             renderer.render(scene, camera);
-        }
-
-        function animate() {
-            render();
             requestAnimationFrame(animate);
         }
         animate();
